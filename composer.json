@@ -1,0 +1,27 @@
+{
+  "name": "currentrms/currentrms_php",
+  "version": "1.0.0",
+  "description": "Current RMS PHP SDK",
+  "keywords": ["currentrms", "sdk", "cloud", "rms", "events"],
+  "type": "library",
+  "homepage": "https://current-rms.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cranbri",
+      "homepage": "http://justtom.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "~6.0",
+    "monolog/monolog": "1.21.0"
+  },
+  "autoload": {
+    "psr-4":{
+      "CurrentRms\\": "src"
+    }
+  }
+}
