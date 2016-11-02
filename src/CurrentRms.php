@@ -22,13 +22,8 @@ class CurrentRms
 
     public function initClient()
     {
-        $config = $this->getConfigurationValues();
         $this->client = new Client([
-            'base_uri' => $config['uri'],
-            'headers'  => [
-                'X-AUTH-TOKEN' => $config['token'],
-                'X-SUBDOMAIN'  => $config['subdomain']
-            ],
+            $this->getConfigurationValues(),
             'handler'  => $this->createLoggingHandlerStack('RESPONSE: {code} - {res_body}')
         ]);
     }
